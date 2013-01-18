@@ -1,0 +1,2 @@
+/auto/users/ms12mz/git/database-management-system/bin/CMakeFiles/minibase-heappage.dir
+/auto/users/ms12mz/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir

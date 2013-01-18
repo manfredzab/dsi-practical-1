@@ -1,0 +1,1 @@
+/usr/lib64/ccache/c++   -g    CMakeFiles/minibase-heappage.dir/main.o CMakeFiles/minibase-heappage.dir/test.o  -o minibase-heappage -rdynamic ../lib/libjoins.a ../lib/libbtree.a spacemgr/libspacemgr.a ../lib/libbufmgr.a spacemgr/libspacemgr.a ../lib/libglobaldefs.a spacemgr/libspacemgr.a 

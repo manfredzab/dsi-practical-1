@@ -1,0 +1,2 @@
+/usr/bin/ar cr libspacemgr.a  CMakeFiles/spacemgr.dir/db.o CMakeFiles/spacemgr.dir/dirpage.o CMakeFiles/spacemgr.dir/heapfile.o CMakeFiles/spacemgr.dir/heappage.o CMakeFiles/spacemgr.dir/heaptest.o CMakeFiles/spacemgr.dir/page.o CMakeFiles/spacemgr.dir/scan.o
+/usr/bin/ranlib libspacemgr.a
