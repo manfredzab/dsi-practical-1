@@ -44,25 +44,3 @@ iostream
 include/heaptest.h
 /auto/users/ms12mz/git/database-management-system/include/heaptest.h
 
-/auto/users/ms12mz/git/database-management-system/test.cpp
-stdlib.h
--
-stdio.h
--
-sys/types.h
--
-string.h
--
-errno.h
--
-iostream
--
-assert.h
--
-unistd.h
--
-include/new_error.h
-/auto/users/ms12mz/git/database-management-system/include/new_error.h
-include/test.h
-/auto/users/ms12mz/git/database-management-system/include/test.h
-
