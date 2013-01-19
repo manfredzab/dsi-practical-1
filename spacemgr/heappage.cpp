@@ -94,7 +94,7 @@ Status HeapPage::InsertRecord(char *recPtr, int length, RecordID& rid)
 	// Update the remaining memory, offset from the start of data area and the number of available slots
 	freeSpace -= memoryRequired;
 	fillPtr += length;
-	numOfSlots++;
+	numOfSlots += emptySlotFound ? 0 : 1;
 
 	return OK;
 }
@@ -295,7 +295,15 @@ int HeapPage::AvailableSpace(void)
 
 bool HeapPage::IsEmpty(void)
 {
-	return (0 == numOfSlots);
+	for (short i = 0; i < numOfSlots; i++)
+	{
+		if (!SLOT_IS_EMPTY(slots[i]))
+		{
+			return false;
+		}
+	}
+
+	return true;
 }
 
 
