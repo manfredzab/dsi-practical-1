@@ -14,10 +14,6 @@ int main(int argc, char **argv)
 
    dbstatus = hd.RunTests();
 
-   cout << "test";
-   char* buffer;
-   cin >> buffer;
-
    // Check if the create database has succeeded
    if (dbstatus != OK) {       
       cout << "Error encountered during hfpage tests: " << endl;

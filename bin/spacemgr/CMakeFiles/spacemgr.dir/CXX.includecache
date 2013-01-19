@@ -42,6 +42,18 @@ minirel.h
 frame.h
 /auto/users/ms12mz/git/database-management-system/spacemgr/../include/frame.h
 
+/auto/users/ms12mz/git/database-management-system/spacemgr/../include/heapfile.h
+minirel.h
+/auto/users/ms12mz/git/database-management-system/spacemgr/../include/minirel.h
+page.h
+/auto/users/ms12mz/git/database-management-system/spacemgr/../include/page.h
+
+/auto/users/ms12mz/git/database-management-system/spacemgr/../include/heappage.h
+minirel.h
+/auto/users/ms12mz/git/database-management-system/spacemgr/../include/minirel.h
+page.h
+/auto/users/ms12mz/git/database-management-system/spacemgr/../include/page.h
+
 /auto/users/ms12mz/git/database-management-system/spacemgr/../include/minirel.h
 iostream
 -
@@ -72,17 +84,19 @@ hash.h
 
 /auto/users/ms12mz/git/database-management-system/spacemgr/../include/system_defs.h
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/db.cpp
-unistd.h
+/auto/users/ms12mz/git/database-management-system/spacemgr/heappage.cpp
+iostream
 -
-stdio.h
+stdlib.h
 -
-fcntl.h
+memory.h
 -
-iomanip
--
-../include/db.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/db.h
+../include/heappage.h
+/auto/users/ms12mz/git/database-management-system/spacemgr/../include/heappage.h
+../include/heapfile.h
+/auto/users/ms12mz/git/database-management-system/spacemgr/../include/heapfile.h
 ../include/bufmgr.h
 /auto/users/ms12mz/git/database-management-system/spacemgr/../include/bufmgr.h
+../include/db.h
+/auto/users/ms12mz/git/database-management-system/spacemgr/../include/db.h
 
