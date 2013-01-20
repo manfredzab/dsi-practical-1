@@ -1,2 +1,0 @@
-/home/manfred/git/database-management-system/bin/CMakeFiles/minibase-heappage.dir
-/home/manfred/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir
