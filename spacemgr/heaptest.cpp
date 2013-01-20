@@ -524,5 +524,15 @@ int HeapDriver::Test5()
 
 int HeapDriver::Test6()
 {
-    return TRUE;
+    Status status = OK;
+
+	Test1(); // Add records 0 - 20
+	Test2(); // Delete the odd ones
+
+	HeapFile f("file_1", status);
+	PageID pid = 3;
+
+	status = f.TestCompactSlotDirectory(pid);
+
+    return (status == OK);
 }

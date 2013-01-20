@@ -42,6 +42,8 @@ public:
     class Scan* OpenScan(Status& status);
 
     Status DeleteFile();
+
+    Status TestCompactSlotDirectory(PageID pid);
 };
 
 

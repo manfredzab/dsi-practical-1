@@ -34,14 +34,11 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /auto/users/ms12mz/git/database-management-system
+CMAKE_SOURCE_DIR = /home/manfred/git/database-management-system
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /auto/users/ms12mz/git/database-management-system/bin
+CMAKE_BINARY_DIR = /home/manfred/git/database-management-system/bin
 
 # Include any dependencies generated for this target.
 include CMakeFiles/minibase-heappage.dir/depend.make
@@ -54,17 +51,17 @@ include CMakeFiles/minibase-heappage.dir/flags.make
 
 CMakeFiles/minibase-heappage.dir/main.o: CMakeFiles/minibase-heappage.dir/flags.make
 CMakeFiles/minibase-heappage.dir/main.o: ../main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /auto/users/ms12mz/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/manfred/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/minibase-heappage.dir/main.o"
-	/usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/minibase-heappage.dir/main.o -c /auto/users/ms12mz/git/database-management-system/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/minibase-heappage.dir/main.o -c /home/manfred/git/database-management-system/main.cpp
 
 CMakeFiles/minibase-heappage.dir/main.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minibase-heappage.dir/main.i"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /auto/users/ms12mz/git/database-management-system/main.cpp > CMakeFiles/minibase-heappage.dir/main.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/manfred/git/database-management-system/main.cpp > CMakeFiles/minibase-heappage.dir/main.i
 
 CMakeFiles/minibase-heappage.dir/main.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minibase-heappage.dir/main.s"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /auto/users/ms12mz/git/database-management-system/main.cpp -o CMakeFiles/minibase-heappage.dir/main.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/manfred/git/database-management-system/main.cpp -o CMakeFiles/minibase-heappage.dir/main.s
 
 CMakeFiles/minibase-heappage.dir/main.o.requires:
 .PHONY : CMakeFiles/minibase-heappage.dir/main.o.requires
@@ -77,17 +74,17 @@ CMakeFiles/minibase-heappage.dir/main.o.provides.build: CMakeFiles/minibase-heap
 
 CMakeFiles/minibase-heappage.dir/test.o: CMakeFiles/minibase-heappage.dir/flags.make
 CMakeFiles/minibase-heappage.dir/test.o: ../test.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /auto/users/ms12mz/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/manfred/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/minibase-heappage.dir/test.o"
-	/usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/minibase-heappage.dir/test.o -c /auto/users/ms12mz/git/database-management-system/test.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/minibase-heappage.dir/test.o -c /home/manfred/git/database-management-system/test.cpp
 
 CMakeFiles/minibase-heappage.dir/test.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minibase-heappage.dir/test.i"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /auto/users/ms12mz/git/database-management-system/test.cpp > CMakeFiles/minibase-heappage.dir/test.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/manfred/git/database-management-system/test.cpp > CMakeFiles/minibase-heappage.dir/test.i
 
 CMakeFiles/minibase-heappage.dir/test.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minibase-heappage.dir/test.s"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /auto/users/ms12mz/git/database-management-system/test.cpp -o CMakeFiles/minibase-heappage.dir/test.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/manfred/git/database-management-system/test.cpp -o CMakeFiles/minibase-heappage.dir/test.s
 
 CMakeFiles/minibase-heappage.dir/test.o.requires:
 .PHONY : CMakeFiles/minibase-heappage.dir/test.o.requires
@@ -133,6 +130,6 @@ CMakeFiles/minibase-heappage.dir/clean:
 .PHONY : CMakeFiles/minibase-heappage.dir/clean
 
 CMakeFiles/minibase-heappage.dir/depend:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /auto/users/ms12mz/git/database-management-system /auto/users/ms12mz/git/database-management-system /auto/users/ms12mz/git/database-management-system/bin /auto/users/ms12mz/git/database-management-system/bin /auto/users/ms12mz/git/database-management-system/bin/CMakeFiles/minibase-heappage.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/manfred/git/database-management-system/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/manfred/git/database-management-system /home/manfred/git/database-management-system /home/manfred/git/database-management-system/bin /home/manfred/git/database-management-system/bin /home/manfred/git/database-management-system/bin/CMakeFiles/minibase-heappage.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/minibase-heappage.dir/depend
 

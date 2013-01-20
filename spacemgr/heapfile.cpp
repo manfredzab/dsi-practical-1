@@ -579,3 +579,27 @@ Status HeapFile::NewPage(PageID &pid, PageID &currDirPid)
 	return OK;
 }
 
+
+Status HeapFile::TestCompactSlotDirectory(PageID pid)
+{
+	HeapPage *page;
+	Status status = OK;
+
+	PIN(pid, page);
+
+	int spaceAvailableBeforeCompacting = page->AvailableSpace();
+	page->CompactSlotDir();
+	int spaceAvailableAfterCompacting = page->AvailableSpace();
+
+	// Number of compacted slots - 10
+	// Need extra space of one slot for inserting a record (since there are no more gaps)
+	if (spaceAvailableAfterCompacting != spaceAvailableBeforeCompacting + 10*4 - 4)
+	{
+		status = FAIL;
+		cout << "Unexpected amount of space available after compacting the slot directory.\n";
+	}
+
+	UNPIN(pid, DIRTY);
+
+	return status;
+}

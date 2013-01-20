@@ -45,8 +45,6 @@ protected :
 			     // grows from the back towards to start of 
 			     // a page. 
 
-	void CompactSlotDir();
-
 public:
 
 	void Init(PageID pageNo);
@@ -63,6 +61,7 @@ public:
 	Status GetRecord(RecordID rid, char* recPtr, int& recLen);
 	Status ReturnRecord(RecordID rid, char*& recPtr, int& recLen);
 	Status ReturnOffset(RecordID rid, int& offset);
+	void   CompactSlotDir();
 	int    AvailableSpace(void);
 	bool   IsEmpty(void);
 	int    GetNumOfRecords();

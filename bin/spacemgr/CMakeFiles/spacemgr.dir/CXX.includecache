@@ -6,65 +6,69 @@
 
 #IncludeRegexTransform: 
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/bufmgr.h
+/home/manfred/git/database-management-system/spacemgr/../include/bufmgr.h
 db.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/db.h
+/home/manfred/git/database-management-system/spacemgr/../include/db.h
 page.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/page.h
+/home/manfred/git/database-management-system/spacemgr/../include/page.h
 frame.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/frame.h
+/home/manfred/git/database-management-system/spacemgr/../include/frame.h
 replacer.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/replacer.h
+/home/manfred/git/database-management-system/spacemgr/../include/replacer.h
 hash.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/hash.h
+/home/manfred/git/database-management-system/spacemgr/../include/hash.h
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/clockframe.h
+/home/manfred/git/database-management-system/spacemgr/../include/clockframe.h
 frame.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/frame.h
+/home/manfred/git/database-management-system/spacemgr/../include/frame.h
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/da_types.h
+/home/manfred/git/database-management-system/spacemgr/../include/da_types.h
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/db.h
+/home/manfred/git/database-management-system/spacemgr/../include/db.h
 string.h
 -
 stdlib.h
 -
 page.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/page.h
+/home/manfred/git/database-management-system/spacemgr/../include/page.h
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/frame.h
+/home/manfred/git/database-management-system/spacemgr/../include/dirpage.h
+heappage.h
+/home/manfred/git/database-management-system/spacemgr/../include/heappage.h
+
+/home/manfred/git/database-management-system/spacemgr/../include/frame.h
 page.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/page.h
+/home/manfred/git/database-management-system/spacemgr/../include/page.h
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/hash.h
+/home/manfred/git/database-management-system/spacemgr/../include/hash.h
 minirel.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/minirel.h
+/home/manfred/git/database-management-system/spacemgr/../include/minirel.h
 frame.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/frame.h
+/home/manfred/git/database-management-system/spacemgr/../include/frame.h
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/heapfile.h
+/home/manfred/git/database-management-system/spacemgr/../include/heapfile.h
 minirel.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/minirel.h
+/home/manfred/git/database-management-system/spacemgr/../include/minirel.h
 page.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/page.h
+/home/manfred/git/database-management-system/spacemgr/../include/page.h
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/heappage.h
+/home/manfred/git/database-management-system/spacemgr/../include/heappage.h
 minirel.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/minirel.h
+/home/manfred/git/database-management-system/spacemgr/../include/minirel.h
 page.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/page.h
+/home/manfred/git/database-management-system/spacemgr/../include/page.h
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/minirel.h
+/home/manfred/git/database-management-system/spacemgr/../include/minirel.h
 iostream
 -
 da_types.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/da_types.h
+/home/manfred/git/database-management-system/spacemgr/../include/da_types.h
 new_error.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/new_error.h
+/home/manfred/git/database-management-system/spacemgr/../include/new_error.h
 system_defs.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/system_defs.h
+/home/manfred/git/database-management-system/spacemgr/../include/system_defs.h
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/new_error.h
+/home/manfred/git/database-management-system/spacemgr/../include/new_error.h
 iostream
 -
 fstream
@@ -72,31 +76,39 @@ fstream
 assert.h
 -
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/page.h
+/home/manfred/git/database-management-system/spacemgr/../include/page.h
 minirel.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/minirel.h
+/home/manfred/git/database-management-system/spacemgr/../include/minirel.h
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/replacer.h
+/home/manfred/git/database-management-system/spacemgr/../include/replacer.h
 clockframe.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/clockframe.h
+/home/manfred/git/database-management-system/spacemgr/../include/clockframe.h
 hash.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/hash.h
+/home/manfred/git/database-management-system/spacemgr/../include/hash.h
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/system_defs.h
+/home/manfred/git/database-management-system/spacemgr/../include/scan.h
+minirel.h
+/home/manfred/git/database-management-system/spacemgr/../include/minirel.h
+dirpage.h
+/home/manfred/git/database-management-system/spacemgr/../include/dirpage.h
+heappage.h
+/home/manfred/git/database-management-system/spacemgr/../include/heappage.h
 
-/auto/users/ms12mz/git/database-management-system/spacemgr/heappage.cpp
-iostream
+/home/manfred/git/database-management-system/spacemgr/../include/system_defs.h
+
+/home/manfred/git/database-management-system/spacemgr/heapfile.cpp
+stdio.h
 -
-stdlib.h
--
-memory.h
--
-../include/heappage.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/heappage.h
 ../include/heapfile.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/heapfile.h
+/home/manfred/git/database-management-system/spacemgr/../include/heapfile.h
+../include/heappage.h
+/home/manfred/git/database-management-system/spacemgr/../include/heappage.h
+../include/dirpage.h
+/home/manfred/git/database-management-system/spacemgr/../include/dirpage.h
+../include/scan.h
+/home/manfred/git/database-management-system/spacemgr/../include/scan.h
 ../include/bufmgr.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/bufmgr.h
+/home/manfred/git/database-management-system/spacemgr/../include/bufmgr.h
 ../include/db.h
-/auto/users/ms12mz/git/database-management-system/spacemgr/../include/db.h
+/home/manfred/git/database-management-system/spacemgr/../include/db.h
 

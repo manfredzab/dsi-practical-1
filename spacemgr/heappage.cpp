@@ -18,32 +18,32 @@ using namespace std;
 
 void HeapPage::Init(PageID pageNo)
 {
-	nextPage = INVALID_PAGE;
-	prevPage = INVALID_PAGE;
-	numOfSlots = 0;
-	pid = pageNo;
-	fillPtr = 0;
-	freeSpace = HEAPPAGE_DATA_SIZE;
+	this->nextPage = INVALID_PAGE;
+	this->prevPage = INVALID_PAGE;
+	this->numOfSlots = 0;
+	this->pid = pageNo;
+	this->fillPtr = 0;
+	this->freeSpace = HEAPPAGE_DATA_SIZE;
 }
 
 void HeapPage::SetNextPage(PageID pageNo)
 {
-	nextPage = pageNo;
+	this->nextPage = pageNo;
 }
 
 void HeapPage::SetPrevPage(PageID pageNo)
 {
-	prevPage = pageNo;
+	this->prevPage = pageNo;
 }
 
 PageID HeapPage::GetNextPage()
 {
-	return nextPage;
+	return this->nextPage;
 }
 
 PageID HeapPage::GetPrevPage()
 {
-	return prevPage;
+	return this->prevPage;
 }
 
 
@@ -61,40 +61,40 @@ Status HeapPage::InsertRecord(char *recPtr, int length, RecordID& rid)
 {
 	// Check if enough memory is available
 	short i;
-	for (i = 0; i < numOfSlots; i++)
+	for (i = 0; i < this->numOfSlots; i++)
 	{
 		// See if there is a space in the slot directory
-		if (SLOT_IS_EMPTY(slots[i]))
+		if (SLOT_IS_EMPTY(this->slots[i]))
 		{
 			break;
 		}
 	}
 
-	bool emptySlotFound = i < numOfSlots;
+	bool emptySlotFound = i < this->numOfSlots;
 
 	// Calculate the required amount of memory
 	int memoryRequired = length + (emptySlotFound ? 0 : sizeof(Slot));
 
-	if (freeSpace < memoryRequired)
+	if (this->freeSpace < memoryRequired)
 	{
 		return DONE;
 	}
 
 	// Enough memory is available, update record structure
-	rid.pageNo = pid;
+	rid.pageNo = this->pid;
 	rid.slotNo = i;
 
 	// Update slot directory
-	SLOT_FILL(slots[i], fillPtr, length);
+	SLOT_FILL(this->slots[i], this->fillPtr, length);
 
 	// Store the record
-	void* destination = data + HEAPPAGE_DATA_SIZE - fillPtr - length;
+	char* destination = this->data + HEAPPAGE_DATA_SIZE - this->fillPtr - length;
 	memcpy(destination, recPtr, length);
 
 	// Update the remaining memory, offset from the start of data area and the number of available slots
-	freeSpace -= memoryRequired;
-	fillPtr += length;
-	numOfSlots += emptySlotFound ? 0 : 1;
+	this->freeSpace -= memoryRequired;
+	this->fillPtr += length;
+	this->numOfSlots += emptySlotFound ? 0 : 1;
 
 	return OK;
 }
@@ -111,26 +111,40 @@ Status HeapPage::InsertRecord(char *recPtr, int length, RecordID& rid)
 
 Status HeapPage::DeleteRecord(const RecordID& rid)
 {
-	if (rid.pageNo != pid ||
-		rid.slotNo >= numOfSlots ||
+	if (rid.pageNo != this->pid ||
+		rid.slotNo >= this->numOfSlots ||
 		rid.slotNo < 0 ||
-		SLOT_IS_EMPTY(slots[rid.slotNo]))
+		SLOT_IS_EMPTY(this->slots[rid.slotNo]))
 	{
 		return FAIL;
 	}
 
-	// No compacting
-	// freeSpace += slots[rid.slotNo].length;
-
-	// Release memory if the last slot
-	if (numOfSlots - 1 == rid.slotNo)
+	for (short i = rid.slotNo + 1; i < this->numOfSlots; i++)
 	{
-		freeSpace += slots[rid.slotNo].length;
-		fillPtr = slots[rid.slotNo].offset;
-		numOfSlots--;
+		if (!SLOT_IS_EMPTY(this->slots[i]))
+		{
+			// Move the record's data
+			char* source = this->data + HEAPPAGE_DATA_SIZE - this->slots[i].offset - this->slots[i].length;
+			char* destination = source + this->slots[rid.slotNo].length;
+			memmove(destination, source, this->slots[i].length);
+
+			// Update the offset of the record that was moved
+			this->slots[i].offset -= this->slots[rid.slotNo].length;
+		}
 	}
 
-	SLOT_SET_EMPTY(slots[rid.slotNo]);
+	this->freeSpace += this->slots[rid.slotNo].length;
+	this->fillPtr -= this->slots[rid.slotNo].length;
+
+	// Release the entry in the slot directory if the last slot
+	if (this->numOfSlots - 1 == rid.slotNo)
+	{
+		this->numOfSlots--;
+		this->freeSpace += sizeof(Slot);
+	}
+
+	// Empty the slot directory entry
+	SLOT_SET_EMPTY(this->slots[rid.slotNo]);
 
 	return OK;
 }
@@ -148,22 +162,22 @@ Status HeapPage::DeleteRecord(const RecordID& rid)
 Status HeapPage::FirstRecord(RecordID& rid)
 {
 	short i;
-	for (i = 0; i < numOfSlots; i++)
+	for (i = 0; i < this->numOfSlots; i++)
 	{
 		// Check for a non-empty slot
-		if (!SLOT_IS_EMPTY(slots[i]))
+		if (!SLOT_IS_EMPTY(this->slots[i]))
 		{
 			break;
 		}
 	}
 
-	if (i == numOfSlots)
+	if (i == this->numOfSlots)
 	{
 		return DONE;
 	}
 
 
-	rid.pageNo = pid;
+	rid.pageNo = this->pid;
 	rid.slotNo = i;
 
 	return OK;
@@ -181,30 +195,30 @@ Status HeapPage::FirstRecord(RecordID& rid)
 
 Status HeapPage::NextRecord (RecordID curRid, RecordID& nextRid)
 {
-	if (curRid.pageNo != pid ||
-		curRid.slotNo >= numOfSlots ||
+	if (curRid.pageNo != this->pid ||
+		curRid.slotNo >= this->numOfSlots ||
 		curRid.slotNo < 0 ||
-		SLOT_IS_EMPTY(slots[curRid.slotNo]))
+		SLOT_IS_EMPTY(this->slots[curRid.slotNo]))
 	{
 		return FAIL;
 	}
 
 	short i;
-	for (i = curRid.slotNo + 1; i < numOfSlots; i++)
+	for (i = curRid.slotNo + 1; i < this->numOfSlots; i++)
 	{
 		// Check for a non-empty slot
-		if (!SLOT_IS_EMPTY(slots[i]))
+		if (!SLOT_IS_EMPTY(this->slots[i]))
 		{
 			break;
 		}
 	}
 
-	if (i == numOfSlots)
+	if (i == this->numOfSlots)
 	{
 		return DONE;
 	}
 
-	nextRid.pageNo = pid;
+	nextRid.pageNo = this->pid;
 	nextRid.slotNo = i;
 
 	return OK;
@@ -222,19 +236,19 @@ Status HeapPage::NextRecord (RecordID curRid, RecordID& nextRid)
 
 Status HeapPage::GetRecord(RecordID rid, char *recPtr, int& length)
 {
-	if (rid.pageNo != pid ||
-		rid.slotNo >= numOfSlots ||
+	if (rid.pageNo != this->pid ||
+		rid.slotNo >= this->numOfSlots ||
 		rid.slotNo < 0 ||
-		SLOT_IS_EMPTY(slots[rid.slotNo]))
+		SLOT_IS_EMPTY(this->slots[rid.slotNo]))
 	{
 		return FAIL;
 	}
 
 	// Set the length
-	length = slots[rid.slotNo].length;
+	length = this->slots[rid.slotNo].length;
 
 	// Copy over the record
-	memcpy(recPtr, data + HEAPPAGE_DATA_SIZE - slots[rid.slotNo].offset - length, length);
+	memcpy(recPtr, this->data + HEAPPAGE_DATA_SIZE - this->slots[rid.slotNo].offset - length, length);
 
     return OK;
 }
@@ -251,19 +265,19 @@ Status HeapPage::GetRecord(RecordID rid, char *recPtr, int& length)
 
 Status HeapPage::ReturnRecord(RecordID rid, char*& recPtr, int& length)
 {
-	if (rid.pageNo != pid ||
-		rid.slotNo >= numOfSlots ||
+	if (rid.pageNo != this->pid ||
+		rid.slotNo >= this->numOfSlots ||
 		rid.slotNo < 0 ||
-		SLOT_IS_EMPTY(slots[rid.slotNo]))
+		SLOT_IS_EMPTY(this->slots[rid.slotNo]))
 	{
 		return FAIL;
 	}
 
 	// Set the length
-	length = slots[rid.slotNo].length;
+	length = this->slots[rid.slotNo].length;
 
 	// Set the pointer to record
-	recPtr = data + HEAPPAGE_DATA_SIZE - slots[rid.slotNo].offset - length;
+	recPtr = this->data + HEAPPAGE_DATA_SIZE - this->slots[rid.slotNo].offset - length;
 
     return OK;
 }
@@ -280,7 +294,20 @@ Status HeapPage::ReturnRecord(RecordID rid, char*& recPtr, int& length)
 
 int HeapPage::AvailableSpace(void)
 {
-	return freeSpace;
+	// Check if there are empty slots in the slot directory
+	short i;
+	for (i = 0; i < this->numOfSlots; i++)
+	{
+		// See if there is a space in the slot directory
+		if (SLOT_IS_EMPTY(this->slots[i]))
+		{
+			break;
+		}
+	}
+
+	bool emptySlotFound = i < this->numOfSlots;
+
+	return this->freeSpace - (emptySlotFound ? 0 : sizeof(Slot));
 }
 
 
@@ -295,9 +322,9 @@ int HeapPage::AvailableSpace(void)
 
 bool HeapPage::IsEmpty(void)
 {
-	for (short i = 0; i < numOfSlots; i++)
+	for (short i = 0; i < this->numOfSlots; i++)
 	{
-		if (!SLOT_IS_EMPTY(slots[i]))
+		if (!SLOT_IS_EMPTY(this->slots[i]))
 		{
 			return false;
 		}
@@ -309,17 +336,32 @@ bool HeapPage::IsEmpty(void)
 
 void HeapPage::CompactSlotDir()
 {
-  // Complete this method to get the S+ mark.
-  // This method is not required for an S mark.
+	// Compact the slot directory
+	int compactedSlots = 0;
+	for (short i = 0; i < this->numOfSlots; i++)
+	{
+		if (SLOT_IS_EMPTY(this->slots[i]))
+		{
+			compactedSlots++;
+		}
+		else
+		{
+			this->slots[i - compactedSlots] = this->slots[i];
+		}
+	}
+
+	// Update page header
+	this->numOfSlots -= compactedSlots;
+	this->freeSpace += compactedSlots * sizeof(Slot);
 }
 
 int HeapPage::GetNumOfRecords()
 {
 	int numOfRecords = 0;
 
-	for (short i = 0; i < numOfSlots; i++)
+	for (short i = 0; i < this->numOfSlots; i++)
 	{
-		if (!SLOT_IS_EMPTY(slots[i]))
+		if (!SLOT_IS_EMPTY(this->slots[i]))
 		{
 			numOfRecords++;
 		}

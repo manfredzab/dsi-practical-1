@@ -38,22 +38,19 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /auto/users/ms12mz/git/database-management-system
+CMAKE_SOURCE_DIR = /home/manfred/git/database-management-system
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /auto/users/ms12mz/git/database-management-system/bin
+CMAKE_BINARY_DIR = /home/manfred/git/database-management-system/bin
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
+	/usr/bin/cmake -i .
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -72,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(CMAKE_COMMAND) -E cmake_progress_start /auto/users/ms12mz/git/database-management-system/bin/CMakeFiles /auto/users/ms12mz/git/database-management-system/bin/spacemgr/CMakeFiles/progress.marks
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f CMakeFiles/Makefile2 spacemgr/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /auto/users/ms12mz/git/database-management-system/bin/CMakeFiles 0
+	cd /home/manfred/git/database-management-system/bin && $(CMAKE_COMMAND) -E cmake_progress_start /home/manfred/git/database-management-system/bin/CMakeFiles /home/manfred/git/database-management-system/bin/spacemgr/CMakeFiles/progress.marks
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f CMakeFiles/Makefile2 spacemgr/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/manfred/git/database-management-system/bin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f CMakeFiles/Makefile2 spacemgr/clean
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f CMakeFiles/Makefile2 spacemgr/clean
 .PHONY : clean
 
 # The main clean target
@@ -88,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f CMakeFiles/Makefile2 spacemgr/preinstall
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f CMakeFiles/Makefile2 spacemgr/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f CMakeFiles/Makefile2 spacemgr/preinstall
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f CMakeFiles/Makefile2 spacemgr/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/manfred/git/database-management-system/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 spacemgr/CMakeFiles/spacemgr.dir/rule:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f CMakeFiles/Makefile2 spacemgr/CMakeFiles/spacemgr.dir/rule
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f CMakeFiles/Makefile2 spacemgr/CMakeFiles/spacemgr.dir/rule
 .PHONY : spacemgr/CMakeFiles/spacemgr.dir/rule
 
 # Convenience name for target.
@@ -112,112 +109,112 @@ spacemgr: spacemgr/CMakeFiles/spacemgr.dir/rule
 
 # fast build rule for target.
 spacemgr/fast:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/build
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/build
 .PHONY : spacemgr/fast
 
 # target to build an object file
 db.o:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/db.o
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/db.o
 .PHONY : db.o
 
 # target to preprocess a source file
 db.i:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/db.i
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/db.i
 .PHONY : db.i
 
 # target to generate assembly for a file
 db.s:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/db.s
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/db.s
 .PHONY : db.s
 
 # target to build an object file
 dirpage.o:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/dirpage.o
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/dirpage.o
 .PHONY : dirpage.o
 
 # target to preprocess a source file
 dirpage.i:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/dirpage.i
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/dirpage.i
 .PHONY : dirpage.i
 
 # target to generate assembly for a file
 dirpage.s:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/dirpage.s
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/dirpage.s
 .PHONY : dirpage.s
 
 # target to build an object file
 heapfile.o:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heapfile.o
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heapfile.o
 .PHONY : heapfile.o
 
 # target to preprocess a source file
 heapfile.i:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heapfile.i
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heapfile.i
 .PHONY : heapfile.i
 
 # target to generate assembly for a file
 heapfile.s:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heapfile.s
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heapfile.s
 .PHONY : heapfile.s
 
 # target to build an object file
 heappage.o:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heappage.o
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heappage.o
 .PHONY : heappage.o
 
 # target to preprocess a source file
 heappage.i:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heappage.i
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heappage.i
 .PHONY : heappage.i
 
 # target to generate assembly for a file
 heappage.s:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heappage.s
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heappage.s
 .PHONY : heappage.s
 
 # target to build an object file
 heaptest.o:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heaptest.o
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heaptest.o
 .PHONY : heaptest.o
 
 # target to preprocess a source file
 heaptest.i:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heaptest.i
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heaptest.i
 .PHONY : heaptest.i
 
 # target to generate assembly for a file
 heaptest.s:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heaptest.s
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/heaptest.s
 .PHONY : heaptest.s
 
 # target to build an object file
 page.o:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/page.o
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/page.o
 .PHONY : page.o
 
 # target to preprocess a source file
 page.i:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/page.i
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/page.i
 .PHONY : page.i
 
 # target to generate assembly for a file
 page.s:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/page.s
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/page.s
 .PHONY : page.s
 
 # target to build an object file
 scan.o:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/scan.o
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/scan.o
 .PHONY : scan.o
 
 # target to preprocess a source file
 scan.i:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/scan.i
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/scan.i
 .PHONY : scan.i
 
 # target to generate assembly for a file
 scan.s:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/scan.s
+	cd /home/manfred/git/database-management-system/bin && $(MAKE) -f spacemgr/CMakeFiles/spacemgr.dir/build.make spacemgr/CMakeFiles/spacemgr.dir/scan.s
 .PHONY : scan.s
 
 # Help Target
@@ -261,6 +258,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/manfred/git/database-management-system/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

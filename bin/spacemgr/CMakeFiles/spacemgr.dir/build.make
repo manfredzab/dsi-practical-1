@@ -34,14 +34,11 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /auto/users/ms12mz/git/database-management-system
+CMAKE_SOURCE_DIR = /home/manfred/git/database-management-system
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /auto/users/ms12mz/git/database-management-system/bin
+CMAKE_BINARY_DIR = /home/manfred/git/database-management-system/bin
 
 # Include any dependencies generated for this target.
 include spacemgr/CMakeFiles/spacemgr.dir/depend.make
@@ -54,17 +51,17 @@ include spacemgr/CMakeFiles/spacemgr.dir/flags.make
 
 spacemgr/CMakeFiles/spacemgr.dir/db.o: spacemgr/CMakeFiles/spacemgr.dir/flags.make
 spacemgr/CMakeFiles/spacemgr.dir/db.o: ../spacemgr/db.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /auto/users/ms12mz/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/manfred/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object spacemgr/CMakeFiles/spacemgr.dir/db.o"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spacemgr.dir/db.o -c /auto/users/ms12mz/git/database-management-system/spacemgr/db.cpp
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spacemgr.dir/db.o -c /home/manfred/git/database-management-system/spacemgr/db.cpp
 
 spacemgr/CMakeFiles/spacemgr.dir/db.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spacemgr.dir/db.i"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /auto/users/ms12mz/git/database-management-system/spacemgr/db.cpp > CMakeFiles/spacemgr.dir/db.i
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/manfred/git/database-management-system/spacemgr/db.cpp > CMakeFiles/spacemgr.dir/db.i
 
 spacemgr/CMakeFiles/spacemgr.dir/db.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spacemgr.dir/db.s"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /auto/users/ms12mz/git/database-management-system/spacemgr/db.cpp -o CMakeFiles/spacemgr.dir/db.s
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/manfred/git/database-management-system/spacemgr/db.cpp -o CMakeFiles/spacemgr.dir/db.s
 
 spacemgr/CMakeFiles/spacemgr.dir/db.o.requires:
 .PHONY : spacemgr/CMakeFiles/spacemgr.dir/db.o.requires
@@ -77,17 +74,17 @@ spacemgr/CMakeFiles/spacemgr.dir/db.o.provides.build: spacemgr/CMakeFiles/spacem
 
 spacemgr/CMakeFiles/spacemgr.dir/dirpage.o: spacemgr/CMakeFiles/spacemgr.dir/flags.make
 spacemgr/CMakeFiles/spacemgr.dir/dirpage.o: ../spacemgr/dirpage.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /auto/users/ms12mz/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/manfred/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object spacemgr/CMakeFiles/spacemgr.dir/dirpage.o"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spacemgr.dir/dirpage.o -c /auto/users/ms12mz/git/database-management-system/spacemgr/dirpage.cpp
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spacemgr.dir/dirpage.o -c /home/manfred/git/database-management-system/spacemgr/dirpage.cpp
 
 spacemgr/CMakeFiles/spacemgr.dir/dirpage.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spacemgr.dir/dirpage.i"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /auto/users/ms12mz/git/database-management-system/spacemgr/dirpage.cpp > CMakeFiles/spacemgr.dir/dirpage.i
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/manfred/git/database-management-system/spacemgr/dirpage.cpp > CMakeFiles/spacemgr.dir/dirpage.i
 
 spacemgr/CMakeFiles/spacemgr.dir/dirpage.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spacemgr.dir/dirpage.s"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /auto/users/ms12mz/git/database-management-system/spacemgr/dirpage.cpp -o CMakeFiles/spacemgr.dir/dirpage.s
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/manfred/git/database-management-system/spacemgr/dirpage.cpp -o CMakeFiles/spacemgr.dir/dirpage.s
 
 spacemgr/CMakeFiles/spacemgr.dir/dirpage.o.requires:
 .PHONY : spacemgr/CMakeFiles/spacemgr.dir/dirpage.o.requires
@@ -100,17 +97,17 @@ spacemgr/CMakeFiles/spacemgr.dir/dirpage.o.provides.build: spacemgr/CMakeFiles/s
 
 spacemgr/CMakeFiles/spacemgr.dir/heapfile.o: spacemgr/CMakeFiles/spacemgr.dir/flags.make
 spacemgr/CMakeFiles/spacemgr.dir/heapfile.o: ../spacemgr/heapfile.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /auto/users/ms12mz/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/manfred/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object spacemgr/CMakeFiles/spacemgr.dir/heapfile.o"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spacemgr.dir/heapfile.o -c /auto/users/ms12mz/git/database-management-system/spacemgr/heapfile.cpp
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spacemgr.dir/heapfile.o -c /home/manfred/git/database-management-system/spacemgr/heapfile.cpp
 
 spacemgr/CMakeFiles/spacemgr.dir/heapfile.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spacemgr.dir/heapfile.i"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /auto/users/ms12mz/git/database-management-system/spacemgr/heapfile.cpp > CMakeFiles/spacemgr.dir/heapfile.i
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/manfred/git/database-management-system/spacemgr/heapfile.cpp > CMakeFiles/spacemgr.dir/heapfile.i
 
 spacemgr/CMakeFiles/spacemgr.dir/heapfile.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spacemgr.dir/heapfile.s"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /auto/users/ms12mz/git/database-management-system/spacemgr/heapfile.cpp -o CMakeFiles/spacemgr.dir/heapfile.s
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/manfred/git/database-management-system/spacemgr/heapfile.cpp -o CMakeFiles/spacemgr.dir/heapfile.s
 
 spacemgr/CMakeFiles/spacemgr.dir/heapfile.o.requires:
 .PHONY : spacemgr/CMakeFiles/spacemgr.dir/heapfile.o.requires
@@ -123,17 +120,17 @@ spacemgr/CMakeFiles/spacemgr.dir/heapfile.o.provides.build: spacemgr/CMakeFiles/
 
 spacemgr/CMakeFiles/spacemgr.dir/heappage.o: spacemgr/CMakeFiles/spacemgr.dir/flags.make
 spacemgr/CMakeFiles/spacemgr.dir/heappage.o: ../spacemgr/heappage.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /auto/users/ms12mz/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/manfred/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object spacemgr/CMakeFiles/spacemgr.dir/heappage.o"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spacemgr.dir/heappage.o -c /auto/users/ms12mz/git/database-management-system/spacemgr/heappage.cpp
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spacemgr.dir/heappage.o -c /home/manfred/git/database-management-system/spacemgr/heappage.cpp
 
 spacemgr/CMakeFiles/spacemgr.dir/heappage.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spacemgr.dir/heappage.i"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /auto/users/ms12mz/git/database-management-system/spacemgr/heappage.cpp > CMakeFiles/spacemgr.dir/heappage.i
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/manfred/git/database-management-system/spacemgr/heappage.cpp > CMakeFiles/spacemgr.dir/heappage.i
 
 spacemgr/CMakeFiles/spacemgr.dir/heappage.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spacemgr.dir/heappage.s"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /auto/users/ms12mz/git/database-management-system/spacemgr/heappage.cpp -o CMakeFiles/spacemgr.dir/heappage.s
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/manfred/git/database-management-system/spacemgr/heappage.cpp -o CMakeFiles/spacemgr.dir/heappage.s
 
 spacemgr/CMakeFiles/spacemgr.dir/heappage.o.requires:
 .PHONY : spacemgr/CMakeFiles/spacemgr.dir/heappage.o.requires
@@ -146,17 +143,17 @@ spacemgr/CMakeFiles/spacemgr.dir/heappage.o.provides.build: spacemgr/CMakeFiles/
 
 spacemgr/CMakeFiles/spacemgr.dir/heaptest.o: spacemgr/CMakeFiles/spacemgr.dir/flags.make
 spacemgr/CMakeFiles/spacemgr.dir/heaptest.o: ../spacemgr/heaptest.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /auto/users/ms12mz/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/manfred/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object spacemgr/CMakeFiles/spacemgr.dir/heaptest.o"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spacemgr.dir/heaptest.o -c /auto/users/ms12mz/git/database-management-system/spacemgr/heaptest.cpp
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spacemgr.dir/heaptest.o -c /home/manfred/git/database-management-system/spacemgr/heaptest.cpp
 
 spacemgr/CMakeFiles/spacemgr.dir/heaptest.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spacemgr.dir/heaptest.i"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /auto/users/ms12mz/git/database-management-system/spacemgr/heaptest.cpp > CMakeFiles/spacemgr.dir/heaptest.i
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/manfred/git/database-management-system/spacemgr/heaptest.cpp > CMakeFiles/spacemgr.dir/heaptest.i
 
 spacemgr/CMakeFiles/spacemgr.dir/heaptest.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spacemgr.dir/heaptest.s"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /auto/users/ms12mz/git/database-management-system/spacemgr/heaptest.cpp -o CMakeFiles/spacemgr.dir/heaptest.s
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/manfred/git/database-management-system/spacemgr/heaptest.cpp -o CMakeFiles/spacemgr.dir/heaptest.s
 
 spacemgr/CMakeFiles/spacemgr.dir/heaptest.o.requires:
 .PHONY : spacemgr/CMakeFiles/spacemgr.dir/heaptest.o.requires
@@ -169,17 +166,17 @@ spacemgr/CMakeFiles/spacemgr.dir/heaptest.o.provides.build: spacemgr/CMakeFiles/
 
 spacemgr/CMakeFiles/spacemgr.dir/page.o: spacemgr/CMakeFiles/spacemgr.dir/flags.make
 spacemgr/CMakeFiles/spacemgr.dir/page.o: ../spacemgr/page.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /auto/users/ms12mz/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/manfred/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object spacemgr/CMakeFiles/spacemgr.dir/page.o"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spacemgr.dir/page.o -c /auto/users/ms12mz/git/database-management-system/spacemgr/page.cpp
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spacemgr.dir/page.o -c /home/manfred/git/database-management-system/spacemgr/page.cpp
 
 spacemgr/CMakeFiles/spacemgr.dir/page.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spacemgr.dir/page.i"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /auto/users/ms12mz/git/database-management-system/spacemgr/page.cpp > CMakeFiles/spacemgr.dir/page.i
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/manfred/git/database-management-system/spacemgr/page.cpp > CMakeFiles/spacemgr.dir/page.i
 
 spacemgr/CMakeFiles/spacemgr.dir/page.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spacemgr.dir/page.s"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /auto/users/ms12mz/git/database-management-system/spacemgr/page.cpp -o CMakeFiles/spacemgr.dir/page.s
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/manfred/git/database-management-system/spacemgr/page.cpp -o CMakeFiles/spacemgr.dir/page.s
 
 spacemgr/CMakeFiles/spacemgr.dir/page.o.requires:
 .PHONY : spacemgr/CMakeFiles/spacemgr.dir/page.o.requires
@@ -192,17 +189,17 @@ spacemgr/CMakeFiles/spacemgr.dir/page.o.provides.build: spacemgr/CMakeFiles/spac
 
 spacemgr/CMakeFiles/spacemgr.dir/scan.o: spacemgr/CMakeFiles/spacemgr.dir/flags.make
 spacemgr/CMakeFiles/spacemgr.dir/scan.o: ../spacemgr/scan.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /auto/users/ms12mz/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/manfred/git/database-management-system/bin/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object spacemgr/CMakeFiles/spacemgr.dir/scan.o"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spacemgr.dir/scan.o -c /auto/users/ms12mz/git/database-management-system/spacemgr/scan.cpp
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spacemgr.dir/scan.o -c /home/manfred/git/database-management-system/spacemgr/scan.cpp
 
 spacemgr/CMakeFiles/spacemgr.dir/scan.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spacemgr.dir/scan.i"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /auto/users/ms12mz/git/database-management-system/spacemgr/scan.cpp > CMakeFiles/spacemgr.dir/scan.i
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/manfred/git/database-management-system/spacemgr/scan.cpp > CMakeFiles/spacemgr.dir/scan.i
 
 spacemgr/CMakeFiles/spacemgr.dir/scan.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spacemgr.dir/scan.s"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /auto/users/ms12mz/git/database-management-system/spacemgr/scan.cpp -o CMakeFiles/spacemgr.dir/scan.s
+	cd /home/manfred/git/database-management-system/bin/spacemgr && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/manfred/git/database-management-system/spacemgr/scan.cpp -o CMakeFiles/spacemgr.dir/scan.s
 
 spacemgr/CMakeFiles/spacemgr.dir/scan.o.requires:
 .PHONY : spacemgr/CMakeFiles/spacemgr.dir/scan.o.requires
@@ -236,8 +233,8 @@ spacemgr/libspacemgr.a: spacemgr/CMakeFiles/spacemgr.dir/scan.o
 spacemgr/libspacemgr.a: spacemgr/CMakeFiles/spacemgr.dir/build.make
 spacemgr/libspacemgr.a: spacemgr/CMakeFiles/spacemgr.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libspacemgr.a"
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && $(CMAKE_COMMAND) -P CMakeFiles/spacemgr.dir/cmake_clean_target.cmake
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/spacemgr.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/manfred/git/database-management-system/bin/spacemgr && $(CMAKE_COMMAND) -P CMakeFiles/spacemgr.dir/cmake_clean_target.cmake
+	cd /home/manfred/git/database-management-system/bin/spacemgr && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/spacemgr.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 spacemgr/CMakeFiles/spacemgr.dir/build: spacemgr/libspacemgr.a
@@ -253,10 +250,10 @@ spacemgr/CMakeFiles/spacemgr.dir/requires: spacemgr/CMakeFiles/spacemgr.dir/scan
 .PHONY : spacemgr/CMakeFiles/spacemgr.dir/requires
 
 spacemgr/CMakeFiles/spacemgr.dir/clean:
-	cd /auto/users/ms12mz/git/database-management-system/bin/spacemgr && $(CMAKE_COMMAND) -P CMakeFiles/spacemgr.dir/cmake_clean.cmake
+	cd /home/manfred/git/database-management-system/bin/spacemgr && $(CMAKE_COMMAND) -P CMakeFiles/spacemgr.dir/cmake_clean.cmake
 .PHONY : spacemgr/CMakeFiles/spacemgr.dir/clean
 
 spacemgr/CMakeFiles/spacemgr.dir/depend:
-	cd /auto/users/ms12mz/git/database-management-system/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /auto/users/ms12mz/git/database-management-system /auto/users/ms12mz/git/database-management-system/spacemgr /auto/users/ms12mz/git/database-management-system/bin /auto/users/ms12mz/git/database-management-system/bin/spacemgr /auto/users/ms12mz/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/manfred/git/database-management-system/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/manfred/git/database-management-system /home/manfred/git/database-management-system/spacemgr /home/manfred/git/database-management-system/bin /home/manfred/git/database-management-system/bin/spacemgr /home/manfred/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : spacemgr/CMakeFiles/spacemgr.dir/depend
 

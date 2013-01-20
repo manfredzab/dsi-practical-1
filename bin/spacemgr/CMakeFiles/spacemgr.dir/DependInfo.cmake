@@ -4,13 +4,13 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/auto/users/ms12mz/git/database-management-system/spacemgr/db.cpp" "/auto/users/ms12mz/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/db.o"
-  "/auto/users/ms12mz/git/database-management-system/spacemgr/dirpage.cpp" "/auto/users/ms12mz/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/dirpage.o"
-  "/auto/users/ms12mz/git/database-management-system/spacemgr/heapfile.cpp" "/auto/users/ms12mz/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/heapfile.o"
-  "/auto/users/ms12mz/git/database-management-system/spacemgr/heappage.cpp" "/auto/users/ms12mz/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/heappage.o"
-  "/auto/users/ms12mz/git/database-management-system/spacemgr/heaptest.cpp" "/auto/users/ms12mz/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/heaptest.o"
-  "/auto/users/ms12mz/git/database-management-system/spacemgr/page.cpp" "/auto/users/ms12mz/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/page.o"
-  "/auto/users/ms12mz/git/database-management-system/spacemgr/scan.cpp" "/auto/users/ms12mz/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/scan.o"
+  "/home/manfred/git/database-management-system/spacemgr/db.cpp" "/home/manfred/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/db.o"
+  "/home/manfred/git/database-management-system/spacemgr/dirpage.cpp" "/home/manfred/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/dirpage.o"
+  "/home/manfred/git/database-management-system/spacemgr/heapfile.cpp" "/home/manfred/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/heapfile.o"
+  "/home/manfred/git/database-management-system/spacemgr/heappage.cpp" "/home/manfred/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/heappage.o"
+  "/home/manfred/git/database-management-system/spacemgr/heaptest.cpp" "/home/manfred/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/heaptest.o"
+  "/home/manfred/git/database-management-system/spacemgr/page.cpp" "/home/manfred/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/page.o"
+  "/home/manfred/git/database-management-system/spacemgr/scan.cpp" "/home/manfred/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/scan.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

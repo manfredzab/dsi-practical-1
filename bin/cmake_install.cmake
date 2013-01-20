@@ -1,4 +1,4 @@
-# Install script for directory: /auto/users/ms12mz/git/database-management-system
+# Install script for directory: /home/manfred/git/database-management-system
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,12 +29,12 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
 # Install shared libraries without execute permission?
 IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  SET(CMAKE_INSTALL_SO_NO_EXE "0")
+  SET(CMAKE_INSTALL_SO_NO_EXE "1")
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/auto/users/ms12mz/git/database-management-system/bin/spacemgr/cmake_install.cmake")
+  INCLUDE("/home/manfred/git/database-management-system/bin/spacemgr/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -44,7 +44,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/auto/users/ms12mz/git/database-management-system/bin/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/manfred/git/database-management-system/bin/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/auto/users/ms12mz/git/database-management-system/bin/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/manfred/git/database-management-system/bin/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

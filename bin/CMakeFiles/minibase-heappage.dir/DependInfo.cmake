@@ -4,14 +4,14 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/auto/users/ms12mz/git/database-management-system/main.cpp" "/auto/users/ms12mz/git/database-management-system/bin/CMakeFiles/minibase-heappage.dir/main.o"
-  "/auto/users/ms12mz/git/database-management-system/test.cpp" "/auto/users/ms12mz/git/database-management-system/bin/CMakeFiles/minibase-heappage.dir/test.o"
+  "/home/manfred/git/database-management-system/main.cpp" "/home/manfred/git/database-management-system/bin/CMakeFiles/minibase-heappage.dir/main.o"
+  "/home/manfred/git/database-management-system/test.cpp" "/home/manfred/git/database-management-system/bin/CMakeFiles/minibase-heappage.dir/test.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/auto/users/ms12mz/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/DependInfo.cmake"
+  "/home/manfred/git/database-management-system/bin/spacemgr/CMakeFiles/spacemgr.dir/DependInfo.cmake"
   )
 
 # The include file search paths:
