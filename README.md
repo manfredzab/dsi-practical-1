@@ -1,4 +1,4 @@
-database-management-system
+Database Systems Implementations - Practical 1 (S+)
 ==========================
 
-Relational Database Management System
+https://www.cs.ox.ac.uk/teaching/materials12-13/databasesystemsimplementation/
